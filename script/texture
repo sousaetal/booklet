@@ -23,11 +23,13 @@ TT.plot(class.sys = "BRASIL.TT", tri.data = dados, main="Lemos & Santos (1996)",
 TT.plot(class.sys = "SiBCS13.TT", tri.data = dados, main="SiBCS 2013 (EMBRAPA)", col = "gray0",pch = 19, class.line.col = "black",class.lab.col = "black",lwd.axis = 2,class.p.bg.col = c("gray"))
 ############
 #### DATA
-data=read.csv("C:\\Users\\EXCEL\\texture.csv",header = T,sep = ";",fill = T)
+data=read.csv("C:\\Users\\EXCEL\\texture1.csv",header = T,sep = ";",fill = T)
 data=data.frame("CLAY" = c(as.numeric(Dados$Argila)),"SILT"= c(as.numeric(Dados$Silte)),"SAND" = (as.numeric(Dados$Areia)))
 # Plot  the triangle - BRASIL: Lemos & Santos (1996)
 TT.plot(class.sys = "BRASIL.TT", tri.data = dados,main="Lemos & Santos (1996)", css.transf = TRUE,col = "red",pch = 19,class.line.col = "black",class.lab.col = "black",lwd.axis = 2,class.p.bg.col = c("gray"))
 ######
+#### DATA
+data=read.csv("C:\\Users\\EXCEL\\texture2.csv",header = T,sep = ";",fill = T)
 data =- data.frame( "CLAY" = c(as.numeric(Dados$argila)),
  "SILT" = c(as.numeric(Dados$silt)), "SAND" = c(as.numeric(Dados$areia)),
  "OC" = c(as.numeric(Dados$MO)))
