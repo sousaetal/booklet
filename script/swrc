@@ -1,0 +1,17 @@
+#SSVGM FUNCTION - HydroMe Package
+#DATA
+data=read.table("C:\\Users\\EXCEL\\hybras.csv",header=T,sep=";",fill=T)
+vn.ns=nlsLM(y~SSvgm(x,thr,ths,alp,nscal,mscal),data=dados,control=nls.lm.control (maxiter=200,options(warn=-1)))
+summary(vn.ns)
+#############
+#FITSOILWATER3 FUNCTION - soilphysics Package
+#DATA
+data=read.csv("C:\\Users\\EXCEL\\hybras.csv",header = T,sep = ";",fill = T)
+w=as.numeric(Dados$y)
+h=as.numeric(Dados$x )
+fitsoilwater3 (w,h)
+# SOILWATER FUNCTION - soilphysics Package
+# soil water content for array hPa water potential
+soilwater(x = c(61.2, 102, 337, 1020, 5100, 15300), theta_R = 0.20570, theta_S = 0.8900, alpha = 71.9400, n = 1.06400)
+# SINDEX FUNCTION - - soilphysics Package
+Sindex(0.20570, 0.89000, 71.9400, 1.06400, xlim = c(0, 1500))
