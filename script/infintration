@@ -1,0 +1,5 @@
+# SSGAMPT FUNCTION  - HydroMe Package
+# DATA
+data=read.table("C:\\Users\\EXCEL\\infiltration.csv",header = T,sep = ";",fill = T)
+gamp.ns=nlsLM(Cumrate~SSgampt(Rate,ks,A), data)
+summary(gamp.ns)
