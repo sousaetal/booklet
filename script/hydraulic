@@ -3,4 +3,6 @@
 data=read.csv("C:\\Users\\EXCEL\\hidraulic.csv",header = T,sep = ";",fill = T)
 # 
 ans = fitSHP(obs = list(th = dados$th , K = dados$ku),  suc  = list(th = dados$suc , K = dados$suc), FUN.shp = 'vg', modality     = 'uni', par.shp  =  NULL, fit = 'both', weighting = 'var', log = c('alfa', 'n', 'ks'), control = list(ncomplex = 15, reltol = 1e-07,tolsteps = 7), suc.negativ  = TRUE, integral = FALSE,L = 0, print.info = TRUE )
-#END
+# KU FUNCTION - HydroMe Package
+Ku(suc = seq(1, 1000, by = 1), FUN.shp = 'vGM', par.shp = list(Ks = 10, ths = 0.5, thr = 0,  alfa = 0.02, n = 1.5, tau = 0.5),modality = 'uni', suc.negativ = FALSE)
+#
