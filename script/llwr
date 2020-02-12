@@ -1,0 +1,10 @@
+# LLWR FUCTION - soilphysics package
+#DATA
+data=read.csv("C:\\Users\\EXCEL\\llwr.csv",header = T,sep =  ";",fill = T)
+### 
+w=as.numeric(data$um)
+h=as.numeric(data$pot)
+BD=as.numeric(data$dp)
+PR=as.numeric(data$rp)
+LLRW=(llwr(theta = w, h = h, Bd = BD, Pr = PR, particle.density = 2.65, air = 0.1, critical.PR = 2, h.FC = 100, h.WP = 15000))
+
