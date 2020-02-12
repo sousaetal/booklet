@@ -1,0 +1,10 @@
+# FITBUSSCHER FUNCTION - soilphysics package
+# DATA
+data=read.csv("C:\\Users\\EXCEL\\compact.csv",header = T,sep = ";",fill = T)
+crp=fitbusscher(Pr = Dados$PR, theta = data$Mois, Bd = data$BD)
+summary(crp)
+#####
+# CRITICALMOISTURE FUNCTION - soilphysics package 
+data=read.csv("C:\\Users\\EXCEL\\compact.csv",header = T,sep = ";",fill = T)
+criticalmoisture(theta = data$Mois, Bd = data$BD)
+
